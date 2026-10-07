@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 /.idea
 .DS_Store
+/docs/weekly-deliverables
+docs/API-REFERENCE.md
