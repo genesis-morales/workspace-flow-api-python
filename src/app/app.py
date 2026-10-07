@@ -10,6 +10,7 @@ from src.app.features.auth.presentation.web.routes.email_verification_routes imp
 from src.app.features.projects.presentation.web.routes.project_routes import router as project_router
 from src.app.features.notes.presentation.web.routes.note_routes import project_notes_router, notes_router
 from src.app.features.tasks.presentation.web.routes.task_routes import project_tasks_router, tasks_router
+from src.app.features.repositories.presentation.web.routes.repository_routes import router as repository_router
 
 ENV = os.getenv("APP_ENV", "local")
 
@@ -56,3 +57,4 @@ fastApiApp.include_router(project_notes_router, prefix="/api/v1/projects", tags=
 fastApiApp.include_router(notes_router, prefix="/api/v1/notes", tags=["Notes"])
 fastApiApp.include_router(project_tasks_router, prefix="/api/v1/projects", tags=["Tasks"])
 fastApiApp.include_router(tasks_router, prefix="/api/v1/tasks", tags=["Tasks"])
+fastApiApp.include_router(repository_router, prefix="/api/v1/projects", tags=["Repositories"])
